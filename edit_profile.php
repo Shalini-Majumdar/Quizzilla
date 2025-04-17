@@ -13,7 +13,7 @@ $success = "";
 // Handle form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $new_name = $_POST['name'];
-    $profile_picture = $_SESSION['profile_picture']; // default
+    $profile_picture = $_SESSION['profile_picture'];
 
     // Handle file upload
     if (isset($_FILES['profile_pic']) && $_FILES['profile_pic']['error'] === UPLOAD_ERR_OK) {

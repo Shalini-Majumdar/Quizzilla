@@ -7,7 +7,6 @@ $_SESSION = [];
 // Destroy the session
 session_destroy();
 
-// Optional: remove session cookie
 if (ini_get("session.use_cookies")) {
     $params = session_get_cookie_params();
     setcookie(

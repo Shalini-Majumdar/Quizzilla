@@ -27,7 +27,6 @@ if ($creator_id != $user_id) {
     die("Unauthorized: You are not the creator of this quiz.");
 }
 
-// Optional: delete attempts and responses
 // You can enable this if needed
 $conn->query("DELETE r FROM responses r JOIN attempts a ON r.attempt_id = a.id WHERE a.quiz_id = $quiz_id");
 $conn->query("DELETE FROM attempts WHERE quiz_id = $quiz_id");

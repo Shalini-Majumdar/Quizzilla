@@ -49,26 +49,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <?php include 'guest_header.php'; ?>
 
 <div class="container d-flex justify-content-center align-items-center vh-100">
-    <div class="card p-4 shadow" style="min-width: 350px;">
-        <h4 class="text-center mb-4">Login to QuizApp</h4>
-
-        <?php if (!empty($error)): ?>
-            <div class="alert alert-danger"><?= htmlspecialchars($error) ?></div>
-        <?php endif; ?>
-
-        <form method="POST">
-            <div class="mb-3">
-                <input type="email" name="email" class="form-control" required placeholder="Email">
+    <div>
+        <div class="card p-4 shadow" style="min-width: 350px;">
+            <div class="text-center mb-4">
+                <img src="images/big_logo.png" alt="Big Logo" width="100" height="100">
             </div>
-            <div class="mb-3">
-                <input type="password" name="password" class="form-control" required placeholder="Password">
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Login</button>
-        </form>
 
-        <p class="mt-3 text-center">
-            Don't have an account? <a href="signup.php">Sign Up</a>
-        </p>
+            <h4 class="text-center mb-4">Login to Quizzilla</h4>
+
+            <?php if (!empty($error)): ?>
+                <div class="alert alert-danger"><?= htmlspecialchars($error) ?></div>
+            <?php endif; ?>
+
+            <form method="POST">
+                <div class="mb-3">
+                    <input type="email" name="email" class="form-control" required placeholder="Email">
+                </div>
+                <div class="mb-3">
+                    <input type="password" name="password" class="form-control" required placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+
+            <p class="mt-3 text-center">
+                Don't have an account? <a href="signup.php">Sign Up</a>
+            </p>
+        </div>
     </div>
 </div>
 

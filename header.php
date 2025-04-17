@@ -12,7 +12,7 @@ if (!isset($_SESSION['user_id'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Quiz Website</title>
+    <title>Quizzilla</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -20,7 +20,10 @@ if (!isset($_SESSION['user_id'])) {
 <div class="d-flex">
     <!-- Sidebar -->
     <nav class="bg-dark text-white p-3" style="width: 220px; min-height: 100vh;">
-        <h4 class="text-white mb-4">QuizApp</h4>
+        <div class="d-flex align-items-center mb-4">
+            <img src="images/logo.png" alt="Logo" width="50" height="50" class="me-2">
+            <h4 class="text-white mb-0">Quizzilla</h4>
+        </div>
         <a href="dashboard.php" class="text-white d-block mb-2 text-decoration-none">🏠 Dashboard</a>
         <a href="my_quizzes.php" class="text-white d-block mb-2 text-decoration-none">🧠 My Quizzes</a>
         <a href="history.php" class="text-white d-block mb-2 text-decoration-none">📜 History</a>
