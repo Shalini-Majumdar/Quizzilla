@@ -69,7 +69,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    // ✅ Done - Redirect to quiz page or dashboard
     header("Location: quiz.php?id=$quiz_id&updated=1");
     exit;
 } else {

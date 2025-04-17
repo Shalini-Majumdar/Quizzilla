@@ -9,7 +9,6 @@ if (!isset($_SESSION['user_id'])) {
 
 $user_id = $_SESSION['user_id'];
 
-// Optional: implement search if needed
 $search = $_GET['search'] ?? '';
 $search_escaped = $conn->real_escape_string($search);
 $quizzes = $conn->query("SELECT * FROM quizzes WHERE user_id = $user_id AND name LIKE '%$search_escaped%'");

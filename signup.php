@@ -44,6 +44,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <div class="container d-flex justify-content-center align-items-center vh-100">
     <div class="card p-4 shadow" style="min-width: 400px;">
+        <div class="text-center mb-4">
+            <img src="images/big_logo.png" alt="Logo" width="100" height="100">
+        </div>
+        
         <h4 class="text-center mb-4">Create an Account</h4>
 
         <?php if (!empty($error)): ?>

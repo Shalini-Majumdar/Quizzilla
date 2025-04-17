@@ -1,5 +1,6 @@
 <?php
 session_start();
+date_default_timezone_set('Asia/Kolkata');
 include 'db_connect.php';
 
 if (!isset($_SESSION['user_id'])) {
@@ -42,7 +43,11 @@ $result = $stmt->get_result();
                     <tr>
                         <td><?= htmlspecialchars($row['quiz_name']) ?></td>
                         <td><?= $row['score'] ?></td>
-                        <td><?= $row['timestamp'] ?></td>
+                        <?php
+                            $server_time = new DateTime($row['timestamp'], new DateTimeZone('-07:00'));
+                            $server_time->setTimezone(new DateTimeZone('Asia/Kolkata'));
+                        ?>
+                        <td><?= $server_time->format('d M Y, h:i A') ?></td>
                         <td><a href="result.php?attempt_id=<?= $row['attempt_id'] ?>" class="btn btn-sm btn-primary">View</a></td>
                     </tr>
                 <?php endwhile; ?>
